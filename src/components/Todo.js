@@ -28,10 +28,10 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
         >
             <input
                 type="checkbox"
-                id={todo.id}
+                key={todo.id}
+                onClick={() => completeTodo(todo.id)}
             />
-            <span style={todos.done?{textDecoration: "line-through"} : null}>{todo.title}</span>
-            <div key={todo.id} onClick={() => completeTodo(todo.id)}>
+            <div >
                 {todo.text}
             </div>
 
